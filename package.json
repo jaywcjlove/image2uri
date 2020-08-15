@@ -1,6 +1,6 @@
 {
   "name": "image2uri",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert image file to data URI.",
   "scripts": {
     "prepare": "npm run build",
