@@ -1,6 +1,6 @@
 {
   "name": "image2uri",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Convert image file to data URI.",
   "main": "lib/index.js",
   "scripts": {
