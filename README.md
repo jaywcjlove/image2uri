@@ -1,6 +1,11 @@
 Image To URI
 ---
 
+[![](https://img.shields.io/github/issues/jaywcjlove/image2uri.svg)](https://github.com/jaywcjlove/image2uri/releases)
+[![](https://img.shields.io/github/forks/jaywcjlove/image2uri.svg)](https://github.com/jaywcjlove/image2uri/network)
+[![](https://img.shields.io/github/stars/jaywcjlove/image2uri.svg)](https://github.com/jaywcjlove/image2uri/stargazers)
+[![](https://img.shields.io/github/release/jaywcjlove/image2uri.svg)](https://github.com/jaywcjlove/image2uri/releases)
+
 Convert image file to data URI.
 
 ### Install
