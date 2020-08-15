@@ -32,6 +32,9 @@
   ],
   "license": "MIT",
   "author": "Kenny <wowohoo@qq.com>",
+  "dependencies": {
+    "@babel/runtime": "7.11.2"
+  },
   "devDependencies": {
     "@types/jest": "26.0.10",
     "tsbb": "1.7.6"
