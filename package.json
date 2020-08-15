@@ -1,0 +1,39 @@
+{
+  "name": "image2uri",
+  "version": "1.0.0",
+  "description": "Convert image file to data URI.",
+  "scripts": {
+    "prepare": "npm run build",
+    "start": "node lib/index.js",
+    "watch": "npm run watch:ts & npm run build:types -- --watch",
+    "watch:ts": "tsbb watch",
+    "build": "npm run build:ts && npm run build:types",
+    "build:ts": "tsbb build",
+    "build:types": "tsbb types",
+    "test": "tsbb test",
+    "coverage": "tsbb test --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaywcjlove/image2uri"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "jest": {},
+  "keywords": [
+    "image",
+    "uri",
+    "fs",
+    "base64",
+    "image-to-uri",
+    "image2uri"
+  ],
+  "license": "MIT",
+  "author": "Kenny <wowohoo@qq.com>",
+  "devDependencies": {
+    "@types/jest": "26.0.10",
+    "tsbb": "1.7.6"
+  }
+}
