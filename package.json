@@ -2,6 +2,7 @@
   "name": "image2uri",
   "version": "1.0.1",
   "description": "Convert image file to data URI.",
+  "main": "lib/index.js",
   "scripts": {
     "prepare": "npm run build",
     "start": "node lib/index.js",
