@@ -21,8 +21,10 @@ npm i image2uri
 ```js
 import image2uri from "image2uri";
 
-console.log(image2uri('./example.jpg'));
+console.log(image2uri('./example.bmp'));
 // data:image/bmp;base64,Qk0YCAAAAAAAADYAAAAoAAAAGAAAABwAAAABABgAAAAAAOIHAAA....
+console.log(image2uri('./example.jpg'));
+// data:image/jpeg;base64,Qk0YCAAAAAAAADYAAAAoAAAAGAAAABwAAAABABgAAAAAAOIHAAA....
 ```
 
 ### Development
