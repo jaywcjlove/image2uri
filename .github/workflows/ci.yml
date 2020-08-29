@@ -1,4 +1,4 @@
-name: Svgtofont test
+name: image2uri test
 on:
   push:
     branches:
