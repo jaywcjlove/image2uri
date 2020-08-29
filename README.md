@@ -1,7 +1,7 @@
 Image To URI
 ---
 
-[![Svgtofont test](https://github.com/jaywcjlove/image2uri/workflows/Svgtofont%20test/badge.svg)](https://www.npmjs.com/package/image2uri)
+![image2uri test](https://github.com/jaywcjlove/image2uri/workflows/image2uri%20test/badge.svg)
 [![npm version](https://img.shields.io/npm/v/image2uri.svg)](https://www.npmjs.com/package/image2uri)
 [![](https://img.shields.io/github/issues/jaywcjlove/image2uri.svg)](https://github.com/jaywcjlove/image2uri/releases)
 [![](https://img.shields.io/github/forks/jaywcjlove/image2uri.svg)](https://github.com/jaywcjlove/image2uri/network)
