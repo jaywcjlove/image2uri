@@ -2,6 +2,7 @@
   "name": "image2uri",
   "version": "1.0.5",
   "description": "Convert image file to data URI.",
+  "homepage": "https://jaywcjlove.github.io/image2uri/",
   "license": "MIT",
   "author": "Kenny <wowohoo@qq.com>",
   "main": "lib/index.js",
