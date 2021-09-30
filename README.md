@@ -1,12 +1,10 @@
 Image To URI
 ---
 
-![image2uri test](https://github.com/jaywcjlove/image2uri/workflows/image2uri%20test/badge.svg)
+[![NPM Downloads](https://img.shields.io/npm/dm/image2uri.svg?style=flat)](https://www.npmjs.com/package/image2uri)
+[![Build & Test](https://github.com/jaywcjlove/image2uri/actions/workflows/ci.yml/badge.svg)](https://github.com/jaywcjlove/image2uri/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/image2uri.svg)](https://www.npmjs.com/package/image2uri)
-[![](https://img.shields.io/github/issues/jaywcjlove/image2uri.svg)](https://github.com/jaywcjlove/image2uri/releases)
-[![](https://img.shields.io/github/forks/jaywcjlove/image2uri.svg)](https://github.com/jaywcjlove/image2uri/network)
-[![](https://img.shields.io/github/stars/jaywcjlove/image2uri.svg)](https://github.com/jaywcjlove/image2uri/stargazers)
-[![](https://img.shields.io/github/release/jaywcjlove/image2uri.svg)](https://github.com/jaywcjlove/image2uri/releases)
+[![Coverage Status](https://jaywcjlove.github.io/image2uri/badges.svg)](https://jaywcjlove.github.io/image2uri/lcov-report/)
 
 Convert image file to data URI. Support `.png`,`.gif`,`.jpg`,`.jpeg`,`.bm`,`.bmp`,`.webp`,`.ico`,`.svg`.
 
