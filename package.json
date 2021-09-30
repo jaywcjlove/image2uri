@@ -2,10 +2,11 @@
   "name": "image2uri",
   "version": "1.0.4",
   "description": "Convert image file to data URI.",
+  "license": "MIT",
+  "author": "Kenny <wowohoo@qq.com>",
   "main": "lib/index.js",
   "scripts": {
     "prepare": "npm run build",
-    "start": "node lib/index.js",
     "watch": "tsbb watch --disable-babel",
     "build": "tsbb build --disable-babel",
     "test": "tsbb test",
@@ -28,11 +29,6 @@
     "image-to-uri",
     "image2uri"
   ],
-  "license": "MIT",
-  "author": "Kenny <wowohoo@qq.com>",
-  "dependencies": {
-    "@babel/runtime": "7.11.2"
-  },
   "devDependencies": {
     "tsbb": "3.3.7"
   }
