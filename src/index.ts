@@ -23,7 +23,7 @@ export type ExtType = '.png'
   | '.ico'
   | '.svg';
 
-export default (file: string) => {
+export default function image2uri(file: string) {
   const image = fs.readFileSync(file)
   const ext = path.extname(file) as ExtType;
   const contentType = extTypeMap[ext] || 'image/jpeg'

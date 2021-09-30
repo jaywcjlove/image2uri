@@ -6,11 +6,8 @@
   "scripts": {
     "prepare": "npm run build",
     "start": "node lib/index.js",
-    "watch": "npm run watch:ts & npm run build:types -- --watch",
-    "watch:ts": "tsbb watch",
-    "build": "npm run build:ts && npm run build:types",
-    "build:ts": "tsbb build",
-    "build:types": "tsbb types",
+    "watch": "tsbb watch --disable-babel",
+    "build": "tsbb build --disable-babel",
     "test": "tsbb test",
     "coverage": "tsbb test --coverage"
   },
@@ -37,7 +34,6 @@
     "@babel/runtime": "7.11.2"
   },
   "devDependencies": {
-    "@types/jest": "26.0.10",
-    "tsbb": "1.7.6"
+    "tsbb": "3.3.7"
   }
 }
