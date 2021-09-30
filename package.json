@@ -1,6 +1,6 @@
 {
   "name": "image2uri",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Convert image file to data URI.",
   "license": "MIT",
   "author": "Kenny <wowohoo@qq.com>",
