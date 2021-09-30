@@ -31,7 +31,7 @@
   "license": "MIT",
   "author": "Kenny <wowohoo@qq.com>",
   "dependencies": {
-    "@babel/runtime": "7.11.2"
+    "@babel/runtime": "7.15.4"
   },
   "devDependencies": {
     "tsbb": "3.3.7"
