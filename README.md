@@ -33,3 +33,7 @@ npm run build # compile .ts files.
 
 npm run start
 ```
+
+### License
+
+Licensed under the MIT License.
