@@ -23,6 +23,11 @@ console.log(image2uri('./example.bmp'));
 // data:image/bmp;base64,Qk0YCAAAAAAAADYAAAAoAAAAGAAAABwAAAABABgAAAAAAOIHAAA....
 console.log(image2uri('./example.jpg'));
 // data:image/jpeg;base64,Qk0YCAAAAAAAADYAAAAoAAAAGAAAABwAAAABABgAAAAAAOIHAAA....
+
+const uri = await image2uri('https://avatars.githubusercontent.com/u/1680273?v=4', { ext: '.apng' });
+// data:image/apng;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDc
+const avatar = await image2uri('https://avatars.githubusercontent.com/u/1680273?v=4');
+// /9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDc
 ```
 
 ### Development

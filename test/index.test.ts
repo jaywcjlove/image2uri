@@ -7,6 +7,7 @@ it('test uiw.bm', () => {
   const ext = path.extname(bmPath) as ExtType;
   expect(image2uri).toBeDefined()
   expect(typeof uri).toBe('string');
+  // @ts-ignore
   expect(extTypeMap[ext]).toEqual(uri.replace(/^data:(.*);base64\,.+/, "$1"));
 });
 
@@ -15,6 +16,7 @@ it('test uiw.bmp', () => {
   const uri = image2uri(bmpPath);
   const ext = path.extname(bmpPath) as ExtType;
   expect(typeof uri).toBe('string');
+  // @ts-ignore
   expect(extTypeMap[ext]).toEqual(uri.replace(/^data:(.*);base64\,.+/, "$1"));
 });
 
@@ -23,6 +25,7 @@ it('test uiw.gif', () => {
   const uri = image2uri(gifPath);
   const ext = path.extname(gifPath) as ExtType;
   expect(typeof uri).toBe('string');
+  // @ts-ignore
   expect(extTypeMap[ext]).toEqual(uri.replace(/^data:(.*);base64\,.+/, "$1"));
 });
 
@@ -31,6 +34,7 @@ it('test uiw.ico', () => {
   const uri = image2uri(icoPath)
   const ext = path.extname(icoPath) as ExtType;
   expect(typeof uri).toBe('string');
+  // @ts-ignore
   expect(extTypeMap[ext]).toEqual(uri.replace(/^data:(.*);base64\,.+/, "$1"));
 });
 
@@ -39,13 +43,24 @@ it('test uiw.jpeg', () => {
   const uri = image2uri(jpegPath);
   const ext = path.extname(jpegPath) as ExtType;
   expect(typeof uri).toBe('string');
+  // @ts-ignore
   expect(extTypeMap[ext]).toEqual(uri.replace(/^data:(.*);base64\,.+/, "$1"));
+});
+
+it('test uiw-jpeg', () => {
+  const jpegPath = path.join(__dirname, 'imgs', 'uiw-jpeg');
+  const uri = image2uri(jpegPath);
+  const ext = path.extname(jpegPath) as ExtType;
+  expect(typeof uri).toBe('string');
+  // @ts-ignore
+  expect(uri.indexOf('data:image')).toEqual(-1);
 });
 
 it('test uiw.jpg', () => {
   const jpgPath = path.join(__dirname, 'imgs', 'uiw.jpg');
   const uri = image2uri(jpgPath);
   const ext = path.extname(jpgPath) as ExtType;
+  // @ts-ignore
   expect(extTypeMap[ext]).toEqual(uri.replace(/^data:(.*);base64\,.+/, "$1"));
 });
 
@@ -54,6 +69,7 @@ it('test uiw.png', () => {
   const uri = image2uri(pngPath);
   const ext = path.extname(pngPath) as ExtType;
   expect(typeof uri).toBe('string');
+  // @ts-ignore
   expect(extTypeMap[ext]).toEqual(uri.replace(/^data:(.*);base64\,.+/, "$1"));
 });
 
@@ -61,6 +77,7 @@ it('test uiw.svg', () => {
   const svgPath = path.join(__dirname, 'imgs', 'uiw.svg');
   const uri = image2uri(svgPath);
   const ext = path.extname(svgPath) as ExtType;
+  // @ts-ignore
   expect(extTypeMap[ext]).toEqual(uri.replace(/^data:(.*);base64\,.+/, "$1"));
 });
 
@@ -69,5 +86,12 @@ it('test uiw.webp', () => {
   const uri = image2uri(webpPath);
   const ext = path.extname(webpPath) as ExtType;
   expect(typeof uri).toBe('string');
+  // @ts-ignore
   expect(extTypeMap[ext]).toEqual(uri.replace(/^data:(.*);base64\,.+/, "$1"));
 });
+
+it('test https....', async () => {
+  const uri = await image2uri('https://avatars.githubusercontent.com/u/1680273?v=4', { ext: '.apng' });
+  expect(uri.indexOf('data:image/apng;base64')).toEqual(0);
+});
+

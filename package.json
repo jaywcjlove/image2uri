@@ -1,6 +1,6 @@
 {
   "name": "image2uri",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "Convert image file to data URI.",
   "homepage": "https://jaywcjlove.github.io/image2uri/",
   "license": "MIT",
@@ -30,7 +30,10 @@
     "image-to-uri",
     "image2uri"
   ],
+  "dependencies": {
+    "node-fetch": "~2.6.1"
+  },
   "devDependencies": {
-    "tsbb": "3.3.7"
+    "tsbb": "3.5.4"
   }
 }
