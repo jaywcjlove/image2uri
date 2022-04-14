@@ -5,7 +5,9 @@
   "homepage": "https://jaywcjlove.github.io/image2uri/",
   "license": "MIT",
   "author": "Kenny <wowohoo@qq.com>",
-  "main": "lib/index.js",
+  "type": "module",
+  "exports": "./lib/index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "prepare": "npm run build",
     "watch": "tsbb watch --disable-babel",
@@ -21,7 +23,11 @@
     "lib",
     "src"
   ],
-  "jest": {},
+  "jest": {
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/?!(.*)"
+    ]
+  },
   "keywords": [
     "image",
     "uri",
@@ -31,9 +37,10 @@
     "image2uri"
   ],
   "dependencies": {
-    "node-fetch": "~2.6.1"
+    "node-fetch": "^3.2.3"
   },
   "devDependencies": {
+    "@types/node": "~17.0.24",
     "tsbb": "^3.7.2"
   }
 }

@@ -16,19 +16,9 @@ export const extTypeMap = {
   '.svg': 'image/svg+xml'
 }
 
-export type ExtType = '.png'
-  | '.apng'
-  | '.gif'
-  | '.jpg'
-  | '.jpeg'
-  | '.bm'
-  | '.bmp'
-  | '.webp'
-  | '.ico'
-  | '.svg';
-
+export type ExtType =  keyof typeof extTypeMap;
 export default function image2uri(file: string, options: { ext?: string } = {}): string | Promise<string> {
-  const ext = options.ext || path.extname(file) as ExtType;
+  const ext: ExtType = (options.ext || path.extname(file)) as ExtType;
   const contentType = extTypeMap[ext]
   if (validUrl(file)) {
     return fetch(file).then((response) => response.buffer()).then((buffer) => {
