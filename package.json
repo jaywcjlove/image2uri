@@ -41,7 +41,7 @@
     "node-fetch": "^3.2.3"
   },
   "devDependencies": {
-    "@types/node": "~17.0.24",
+    "@types/node": "~18.15.0",
     "tsbb": "^3.7.2"
   }
 }
