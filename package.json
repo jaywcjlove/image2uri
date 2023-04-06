@@ -1,6 +1,6 @@
 {
   "name": "image2uri",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Convert image file to data URI.",
   "homepage": "https://jaywcjlove.github.io/image2uri/",
   "license": "MIT",
