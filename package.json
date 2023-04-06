@@ -11,8 +11,8 @@
   "main": "./lib/index.js",
   "scripts": {
     "prepare": "npm run build",
-    "watch": "tsbb watch --disable-babel",
-    "build": "tsbb build --disable-babel",
+    "watch": "tsbb watch",
+    "build": "tsbb build",
     "test": "tsbb test",
     "coverage": "tsbb test --coverage"
   },
@@ -41,7 +41,7 @@
     "node-fetch": "^3.2.3"
   },
   "devDependencies": {
-    "@types/node": "~17.0.24",
-    "tsbb": "^3.7.2"
+    "@types/node": "^18.15.11",
+    "tsbb": "^4.1.4"
   }
 }
