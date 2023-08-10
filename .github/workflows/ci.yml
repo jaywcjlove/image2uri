@@ -17,9 +17,20 @@ jobs:
       - run: npm install
       - run: npm run coverage
 
-      - run: npm i coverage-badges-cli markdown-to-html-cli -g
+      - run: npm i coverage-badges-cli@1.1.1 -g
       - run: coverage-badges
-      - run: markdown-to-html --output coverage/index.html --favicon 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏞️</text></svg>'
+
+      - name: Create idoc config.
+        run: |
+          cat > idoc.yml << EOF
+          site: "Image To URI {{version}}"
+          menus:
+            Home: index.html
+          EOF
+    
+      - run: npm install idoc@1.26.6 -g
+      - run: idoc --output="coverage"
+
 
       - name: Generate Contributors Images
         uses: jaywcjlove/github-action-contributors@main
