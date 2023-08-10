@@ -17,8 +17,8 @@ jobs:
       - run: npm install
       - run: npm run coverage
 
-      - run: npm i coverage-badges-cli@1.1.1 -g
-      - run: coverage-badges
+      - name: Create Coverage Badges
+        uses: jaywcjlove/coverage-badges-cli@main
 
       - name: Create idoc config.
         run: |
