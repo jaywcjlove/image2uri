@@ -82,6 +82,42 @@ const uri = await image2uri(&#x27;https://avatars.githubusercontent.com/u/168027
 const avatar = await image2uri(&#x27;https://avatars.githubusercontent.com/u/1680273?v=4&#x27;);
 // /9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDc
 "><div onclick="copied(this)" class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+        <h3 id="api"><a aria-hidden="true" tabindex="-1" href="#api" class="anchor"><span class="icon icon-link"></span></a>API</h3>
+        <pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line line-number" line="1"><span class="token keyword">export</span> <span class="token keyword">declare</span> <span class="token keyword">const</span> <span class="token function-variable function">validUrl</span><span class="token operator">:</span> <span class="token punctuation">(</span>url<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token builtin">boolean</span><span class="token punctuation">;</span>
+</span><span class="code-line line-number" line="2"><span class="token keyword">export</span> <span class="token keyword">declare</span> <span class="token keyword">const</span> extTypeMap<span class="token operator">:</span> <span class="token punctuation">{</span>
+</span><span class="code-line line-number" line="3">    <span class="token string-property property">'.png'</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+</span><span class="code-line line-number" line="4">    <span class="token string-property property">'.apng'</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+</span><span class="code-line line-number" line="5">    <span class="token string-property property">'.gif'</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+</span><span class="code-line line-number" line="6">    <span class="token string-property property">'.jpg'</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+</span><span class="code-line line-number" line="7">    <span class="token string-property property">'.jpeg'</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+</span><span class="code-line line-number" line="8">    <span class="token string-property property">'.bm'</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+</span><span class="code-line line-number" line="9">    <span class="token string-property property">'.bmp'</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+</span><span class="code-line line-number" line="10">    <span class="token string-property property">'.webp'</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+</span><span class="code-line line-number" line="11">    <span class="token string-property property">'.ico'</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+</span><span class="code-line line-number" line="12">    <span class="token string-property property">'.svg'</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+</span><span class="code-line line-number" line="13"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line line-number" line="14"><span class="token keyword">export</span> <span class="token keyword">type</span> <span class="token class-name">ExtType</span> <span class="token operator">=</span> <span class="token keyword">keyof</span> <span class="token keyword">typeof</span> extTypeMap<span class="token punctuation">;</span>
+</span><span class="code-line line-number" line="15"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">image2uri</span><span class="token punctuation">(</span>file<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> options<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+</span><span class="code-line line-number" line="16">    ext<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+</span><span class="code-line line-number" line="17"><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">|</span> <span class="token builtin">Promise</span><span class="token operator">&#x3C;</span><span class="token builtin">string</span><span class="token operator">></span><span class="token punctuation">;</span>
+</span></code><input type="hidden" value="export declare const validUrl: (url: string) => boolean;
+export declare const extTypeMap: {
+    &#x27;.png&#x27;: string;
+    &#x27;.apng&#x27;: string;
+    &#x27;.gif&#x27;: string;
+    &#x27;.jpg&#x27;: string;
+    &#x27;.jpeg&#x27;: string;
+    &#x27;.bm&#x27;: string;
+    &#x27;.bmp&#x27;: string;
+    &#x27;.webp&#x27;: string;
+    &#x27;.ico&#x27;: string;
+    &#x27;.svg&#x27;: string;
+};
+export type ExtType = keyof typeof extTypeMap;
+export default function image2uri(file: string, options?: {
+    ext?: string;
+}): string | Promise<string>;
+"><div onclick="copied(this)" class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
         <h3 id="development"><a aria-hidden="true" tabindex="-1" href="#development" class="anchor"><span class="icon icon-link"></span></a>Development</h3>
         <pre class="language-bash"><code class="language-bash code-highlight"><span class="code-line line-number" line="1"><span class="token function">npm</span> run <span class="token function">watch</span> <span class="token comment"># Listen compile .ts files.</span>
 </span><span class="code-line line-number" line="2"><span class="token function">npm</span> run build <span class="token comment"># compile .ts files.</span>
@@ -107,6 +143,7 @@ npm run start
           <ol class="tocs-list">
             <li><a href="#install" class="tocs-link">Install</a></li>
             <li><a href="#basic-usage" class="tocs-link">Basic Usage</a></li>
+            <li><a href="#api" class="tocs-link">API</a></li>
             <li><a href="#development" class="tocs-link">Development</a></li>
             <li><a href="#related" class="tocs-link">Related</a></li>
           </ol>
