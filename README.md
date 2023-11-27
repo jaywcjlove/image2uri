@@ -1,6 +1,7 @@
 Image To URI
 ===
 
+[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-048754?logo=buymeacoffee)](https://jaywcjlove.github.io/#/sponsor)
 [![NPM Downloads](https://img.shields.io/npm/dm/image2uri.svg?style=flat)](https://www.npmjs.com/package/image2uri)
 [![Build & Test](https://github.com/jaywcjlove/image2uri/actions/workflows/ci.yml/badge.svg)](https://github.com/jaywcjlove/image2uri/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/image2uri.svg)](https://www.npmjs.com/package/image2uri)

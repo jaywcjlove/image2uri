@@ -3,6 +3,7 @@
   "version": "2.1.1",
   "description": "Convert image file to data URI.",
   "homepage": "https://jaywcjlove.github.io/image2uri/",
+  "funding": "https://jaywcjlove.github.io/#/sponsor",
   "license": "MIT",
   "author": "Kenny <wowohoo@qq.com>",
   "type": "module",
