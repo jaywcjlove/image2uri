@@ -84,8 +84,6 @@ jobs:
             
             ${{ steps.changelog.outputs.changelog }}
 
-      - run: npm publish --access public --provenance
+      - run: NODE_AUTH_TOKEN="" npm publish --access public --provenance
         continue-on-error: true
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
   
